@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- main.css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='/css/main.css')}}">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- predict.js -->
+    <script src="{{url_for('static', filename='/js/predict.js')}}"></script>
+
+    <!-- init.js -->
+    <script src="{{url_for('static', filename='/js/init.js')}}"></script>
+
+    <!-- Chartjs-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <!-- smooth_scrolling.js -->
+    <script src="{{url_for('static', filename='/js/smooth_scrolling.js')}}"></script>
+
+    <link rel="icon" href="{{url_for('static', filename='/img/stock-market.png')}}" type="image/png">
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
