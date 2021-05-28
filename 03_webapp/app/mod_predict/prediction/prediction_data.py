@@ -1,9 +1,5 @@
 import requests
 import pandas as pd
-import json
-import joblib
-import os
-from sklearn.preprocessing import RobustScaler
 from flask import current_app as app
 from app.mod_predict.utils.ta_indicators import add_technical_indicators
 

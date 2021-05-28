@@ -3,15 +3,13 @@ from flask import (
     Blueprint,
     request,
     render_template,
-    flash,
-    g,
-    session,
-    redirect,
-    url_for,
-    jsonify,
+    jsonify
 )
 
-from app.mod_predict.utils.input_validator import input_validation, date_validation
+from app.mod_predict.utils.input_validator import (
+    validate_date,
+    validate_prediction_type,
+)
 from app.mod_predict.prediction.prediction_manager import model_predict
 
 # Define the blueprint: 'predict', set its url prefix: app.url/predict
@@ -31,12 +29,12 @@ def predict():
     # Validate date
     valid_date = False
     if date is not None:
-        valid_date = valid_date or date_validation(date)
+        valid_date = valid_date or validate_date(date)
 
     # Validate prediction_type
     valid_prediction_type = False
     if prediction_type is not None:
-        valid_prediction_type = valid_prediction_type or input_validation(
+        valid_prediction_type = valid_prediction_type or validate_prediction_type(
             prediction_type
         )
 

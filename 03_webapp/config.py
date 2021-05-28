@@ -1,5 +1,5 @@
 # Statement for enabling the development environment
-DEBUG = True
+DEBUG = False
 
 # Define API hostname
 API = "localhost:5000"

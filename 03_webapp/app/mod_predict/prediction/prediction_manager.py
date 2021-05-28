@@ -8,10 +8,10 @@ from flask import current_app as app
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 
-def model_predict(date, model_type):
+def model_predict(date, prediction_type):
 
     # Gets model according to prediction type
-    model = get_model(model_type)
+    model = get_model(prediction_type)
 
     # Get processed input and scaler
     df = get_input_for_prediction(date, model)
@@ -24,8 +24,6 @@ def model_predict(date, model_type):
 
     # Rescales prediction to real values
     y = model.get_close_price_scaler().inverse_transform(np.asarray(y).reshape(1, -1))
-
-    print("Y: ", y)
 
     return y[0]
 
@@ -45,5 +43,5 @@ def convert_to_time_series(data, model):
     return x
 
 
-def get_model(model_type):
-    return ModelFactory().get_model(model_type)
+def get_model(prediction_type):
+    return ModelFactory().get_model(prediction_type)
