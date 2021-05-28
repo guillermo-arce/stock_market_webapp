@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    api:
+        build: '02_stock_api'
+        ports:
+            - "5000:5000"
+    webapp:
+        build: '03_webapp'
+        ports:
+            - "7000:7000"
+
+
+        
+        

@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 
 {% block head %}
-<title>LSTM Stock Prediction</title>
+<title>Stock Market Prediction</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -21,7 +21,7 @@
 	<div class="inner intro">
 		<nav>
 			<ul>
-				<li><a href="#intro">INTRO</a></li>
+				<li><a href="#intro">HOME</a></li>
 				<li><a href="#10min">10min</a></li>
 				<li><a href="#1min">1min</a></li>
 				<li><a href="#60min">60min</a></li>
@@ -33,12 +33,12 @@
 <!-- Wrapper -->
 <div id="wrapper">
 	<!-- Intro -->
-	<section id="intro" class="wrapper  spotlights style1">
+	<section id="intro" class="wrapper spotlights style1">
 		<section>
 			<div class="content">
 				<div class="inner">
-					<h1>LSTM Stock Prediction</h1>
-					<p style="font-style: italic;">Welcome to Stock Prediction through LSTM recurrent neural networks</p>
+					<h1>Stock market prediction</h1>
+					<p style="font-style: italic;">Welcome to stock market prediction using LSTM neural networks</p>
 				</div>
 			</div>
 		</section>
@@ -49,19 +49,19 @@
 		<!-- 10 min prediction -->
 		<section id="10min" class="wrapper style1">
 			<div class="inner">
-				<h2>Prediction of 10 minutes </h2>
-				<h5>Currently: <h5 class="date">{{ date }}</h5>
+				<h2>10 minutes' prediction </h2>
+				<h5>Current time: <h5 class="date">{{ date }}</h5>
 				</h5>
 				<div style="padding-bottom: 60px;">
 					<canvas id="chart"></canvas>
 				</div>
 				<div class="features">
 					<section>
-						<h3>Predicted price</h3>
+						<h3>Predicted price:</h3>
 						<p id="predictedPrice10min" class="date">--</p>
 					</section>
 					<section>
-						<h3>Predicted direction</h3>
+						<h3>Predicted direction:</h3>
 						<p id="predictedDirection10min" class="date">--</p>
 					</section>
 				</div>
@@ -79,16 +79,17 @@
 		<!-- 1 min prediction -->
 		<section id="1min" class="wrapper style1">
 			<div class="inner">
-				<h2>Prediction of 1 minute </h2>
-				<h5>Currently: <h5 class="date">{{ date }}</h5></h5>
+				<h2>1 minute's prediction </h2>
+				<h5>Current time: <h5 class="date">{{ date }}</h5>
+				</h5>
 				<div style="padding-top: 60px;">
 					<div class="features">
 						<section>
-							<h3>Predicted price</h3>
+							<h3>Predicted price:</h3>
 							<p id="predictedPrice1min" class="date">--</p>
 						</section>
 						<section>
-							<h3>Predicted direction</h3>
+							<h3>Predicted direction:</h3>
 							<p id="predictedDirection1min" class="date">--</p>
 						</section>
 					</div>
@@ -107,12 +108,13 @@
 		<!-- 60 min prediction -->
 		<section id="60min" class="wrapper style1">
 			<div class="inner">
-				<h2>Prediction of 60 minutes direction </h2>
-				<h5>Currently: <h5 class="date">{{ date }}</h5></h5>
+				<h2>60 minutes' prediction </h2>
+				<h5>Current time: <h5 class="date">{{ date }}</h5>
+				</h5>
 				<div style="padding-top: 60px;">
 					<div class="features">
 						<section>
-							<h3>Predicted direction</h3>
+							<h3>Predicted direction:</h3>
 							<p id="predictedDirection60min" class="date">--</p>
 						</section>
 					</div>
@@ -131,9 +133,11 @@
 		<!-- Footer -->
 		<footer id="footer" class="wrapper style1">
 			<div class="inner">
-				<a>By Guillermo Arce</a>
+				<a>By Guillermo Arce Poyal</a>
 			</div>
 		</footer>
-		<div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+		<div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from
+			<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+		</div>
 		<div style="padding-top: 5px; background-color: white;"></div>
 		{% endblock %}

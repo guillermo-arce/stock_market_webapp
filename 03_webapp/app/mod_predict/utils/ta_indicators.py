@@ -20,91 +20,7 @@ def add_technical_indicators(df):
     df = add_volume_ta(df, HIGH, LOW, CLOSE, VOLUME)
     return df
 
-def add_technical_indicators_complex(df):
-    df = add_trend_ta_complex(df, HIGH, LOW, CLOSE)
-    df = add_volatility_ta_complex(df, HIGH, LOW, CLOSE)
-    df = add_momentum_ta_complex(df, HIGH, LOW, CLOSE, VOLUME)
-    df = add_volume_ta_complex(df, HIGH, LOW, CLOSE, VOLUME)
-    return df
-
 def add_trend_ta(
-    df: pd.DataFrame,
-    high: str,
-    low: str,
-    close: str,
-    fillna: bool = False,
-    colprefix: str = "",
-) -> pd.DataFrame:
-    
-    # SMAs
-    df[f"close_sma"] = SMAIndicator(
-        close=df[close], window=4, fillna=fillna
-    ).sma_indicator()
-    df[f"{colprefix}trend_sma_slow"] = SMAIndicator(
-        close=df[close], window=26, fillna=fillna
-    ).sma_indicator()
-
-    # EMAs
-    df[f"{colprefix}trend_ema_fast"] = EMAIndicator(
-        close=df[close], window=12, fillna=fillna
-    ).ema_indicator()
-    df[f"{colprefix}trend_ema_slow"] = EMAIndicator(
-        close=df[close], window=26, fillna=fillna
-    ).ema_indicator()
-
-    return df
-
-def add_volatility_ta(
-    df: pd.DataFrame,
-    high: str,
-    low: str,
-    close: str,
-    fillna: bool = False,
-    colprefix: str = "",
-) -> pd.DataFrame:
-    
-    # Average True Range (ATR)
-    df[f"{colprefix}volatility_atr"] = AverageTrueRange(
-        close=df[close], high=df[high], low=df[low], window=10, fillna=fillna
-    ).average_true_range()
-    
-    return df
-
-def add_momentum_ta(
-    df: pd.DataFrame,
-    high: str,
-    low: str,
-    close: str,
-    volume: str,
-    fillna: bool = False,
-    colprefix: str = "",
-) -> pd.DataFrame:
-    
-    # Relative Strength Index (RSI)
-    df[f"{colprefix}momentum_rsi"] = RSIIndicator(
-        close=df[close], window=14, fillna=fillna
-    ).rsi()
-    
-    return df
-
-def add_volume_ta(
-    df: pd.DataFrame,
-    high: str,
-    low: str,
-    close: str,
-    volume: str,
-    fillna: bool = False,
-    colprefix: str = "",
-) -> pd.DataFrame:
-    
-    # Volume Price Trend (VPT)
-    df[f"{colprefix}volume_vpt"] = VolumePriceTrendIndicator(
-        close=df[close], volume=df[volume], fillna=fillna
-    ).volume_price_trend()
-    
-    return df
-
-def add_trend_ta_complex(
     df: pd.DataFrame,
     high: str,
     low: str,
@@ -139,7 +55,7 @@ def add_trend_ta_complex(
 
     return df
 
-def add_volatility_ta_complex(
+def add_volatility_ta(
     df: pd.DataFrame,
     high: str,
     low: str,
@@ -167,7 +83,7 @@ def add_volatility_ta_complex(
     
     return df
 
-def add_momentum_ta_complex(
+def add_momentum_ta(
     df: pd.DataFrame,
     high: str,
     low: str,
@@ -202,7 +118,7 @@ def add_momentum_ta_complex(
     
     return df
 
-def add_volume_ta_complex(
+def add_volume_ta(
     df: pd.DataFrame,
     high: str,
     low: str,

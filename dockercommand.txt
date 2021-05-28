@@ -1,0 +1,3 @@
+$ docker image build -t python-hello-world .
+$ docker run -p 5001:5000 -d python-hello-world     //port from localhost, port from inside docker image
+
