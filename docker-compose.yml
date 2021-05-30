@@ -1,11 +1,11 @@
-version: "3.8"
+version: "3.3"
 services:
     api:
-        build: '02_stock_api'
+        build: 'stock_api'
         ports:
             - "5000:5000"
     webapp:
-        build: '03_webapp'
+        build: 'webapp'
         ports:
             - "7000:7000"
 

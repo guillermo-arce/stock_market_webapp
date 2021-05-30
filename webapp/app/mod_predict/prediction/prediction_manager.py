@@ -22,7 +22,7 @@ def model_predict(date, prediction_type):
     # Gets model prediction
     y = model.get_prediction(x)
 
-    # Rescales prediction to real values
+    # Re-scales prediction to real values
     y = model.get_close_price_scaler().inverse_transform(np.asarray(y).reshape(1, -1))
 
     return y[0]

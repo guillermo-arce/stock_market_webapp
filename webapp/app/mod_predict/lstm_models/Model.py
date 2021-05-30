@@ -31,13 +31,13 @@ class AbstractModel(ABC):
 
     def get_scaler(self):
         filename = os.path.join(
-            app.config["BASE_DIR"], "app\mod_predict\data_scalers\scaler.pkl"
+            app.config["BASE_DIR"], "app/mod_predict/data_scalers/scaler.pkl"
         )
         return joblib.load(filename)
 
     def get_close_price_scaler(self):
         filename = os.path.join(
-            app.config["BASE_DIR"], "app\mod_predict\data_scalers\close_scaler.pkl"
+            app.config["BASE_DIR"], "app/mod_predict/data_scalers/close_scaler.pkl"
         )
         return joblib.load(filename)
 

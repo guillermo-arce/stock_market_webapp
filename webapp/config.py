@@ -2,7 +2,7 @@
 DEBUG = False
 
 # Define API hostname
-API = "localhost:5000"
+API = "api:5000"
 
 # Define the application directory
 import os
