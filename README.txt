@@ -12,9 +12,7 @@ Directory structure explained:
 
 HOW-TO:
 
-In order to access the web application, there are two options:
-
-- Accesing http://156.35.163.139:7000 from inside UniOvi network.
+In order to access the web application, you can do the following:
 
 - Deploy the web application locally. For that purpose, it is just needed to execute the following command from the current directory (as well
 	as having "docker" and "docker-compose" installed):
