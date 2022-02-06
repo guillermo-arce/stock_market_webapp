@@ -14,8 +14,7 @@ HOW-TO:
 
 In order to access the web application, you can do the following:
 
-- Deploy the web application locally. For that purpose, it is just needed to execute the following command from the current directory (as well
-	as having "docker" and "docker-compose" installed):
+- Deploy the web application locally. For that purpose, it is just needed to execute the following command from the current directory (as well as having "docker" and "docker-compose" installed):
 
 	$ docker-compose up -d --build
 
