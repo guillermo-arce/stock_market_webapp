@@ -9,6 +9,7 @@ Directory structure explained:
 
 - docker-compose.yml: It is the YAML file to configure our web application deployment.
 
+You can access prediction models repository right here: https://github.com/guillermoarce07/stock_market_models
 
 HOW-TO:
 
